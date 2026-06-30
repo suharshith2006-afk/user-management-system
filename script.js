@@ -94,7 +94,7 @@ function doSignIn(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('http://suharshith.page.gd/auth.php', {
+    fetch('https://suharshith.page.gd/auth.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
@@ -139,7 +139,7 @@ function doSignUp(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('http://suharshith.page.gd/auth.php', {
+    fetch('https://suharshith.page.gd/auth.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
@@ -183,7 +183,7 @@ function showSuccess(title, sub){
     
     // Redirects directly to your live production domain on InfinityFree
     setTimeout(() => { 
-        window.location.href = 'http://suharshith.page.gd/dashboard.php'; 
+        window.location.href = 'https://suharshith.page.gd/dashboard.php'; 
     }, 2500);
 }
 
