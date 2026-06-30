@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(150) NOT NULL UNIQUE,
+  `mobile` VARCHAR(15) NOT NULL,
+  `password_hash` VARCHAR(255) NOT NULL,
+  `profile_pic` VARCHAR(255) DEFAULT 'default_avatar.png',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

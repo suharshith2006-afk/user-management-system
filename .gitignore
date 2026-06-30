@@ -1,0 +1,7 @@
+# Ignore local multi-part file storage uploads directory
+uploads/
+!uploads/default_avatar.png
+
+# Ignore local configuration or environment files if any
+.DS_Store
+Thumbs.db
