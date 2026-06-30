@@ -1,4 +1,4 @@
-# User Management Matrix 🗄️⚡
+# User Management System 🆔🛡️
 
 A live, full-stack database-driven access control system engineered as a centralized identity verification portal. Developed with an elegant cyber-dark design system, this platform bridges a highly responsive frontend layout with a cloud-hosted PHP execution engine and a relational MySQL database to achieve persistent data tracking, dynamic session lifecycle controls, and live profile state updates across the web.
 
@@ -32,15 +32,22 @@ This project represents a fully integrated, production-ready user registration a
 ---
 
 ## 📂 Project Directory Structure
+
 ```text
-user-management-system/
+user-management-matrix/
 │
 ├── index.html        # Main entry viewport shell housing user-facing layout states (Login/Signup)
-├── auth.php          # Central API hub managing request filtering, database checks, and session tokens
-├── db.php            # Production Remote Data Connector Module running strict PDO error handling
-├── dashboard.php     # Protected internal user profile matrix rendering dynamic account metadata
-├── style.css         # Theme design tokens, root color parameters, and dashboard layout parameters
-└── script.js         # Core async telemetry logic, loading animations, and server-side request routing
+├── css/
+│   └── style.css     # Theme design tokens, root color parameters, and dashboard layout parameters
+├── js/
+│   └── script.js     # Core async telemetry logic, loading animations, and server-side request routing
+├── sql/
+│   └── database.sql  # Database structure schema migration file for relational table generation
+├── php/
+│   ├── auth.php      # Central API hub managing request filtering, database checks, and session tokens
+│   ├── db.php        # Production Remote Data Connector Module running strict PDO error handling
+│   └── dashboard.php # Protected internal user profile matrix rendering dynamic account metadata
+└── README.md         # Engineering documentation and full-stack deployment user guide
 ```
 
 ---
@@ -74,4 +81,4 @@ To clone and execute this full-stack project locally within a development enviro
 ### ⚖️ Legal & Academic Disclosure
 Developed as an engineering portfolio asset and full-stack web application development challenge. This software is distributed in the hope that it will be useful for demonstrating modern database integration, secure communication design, and live deployment best practices, without any implied warranty of merchantability or fitness for a particular production environment. 
 
-All rights reserved © 2026. Authorized for educational review.
+All rights reserved © 2026. Authorized for full-stack system evaluation and identity portal presentation review.
