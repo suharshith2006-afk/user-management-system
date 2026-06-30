@@ -94,16 +94,21 @@ function doSignIn(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('https://suharshith.infinityfreeapp.com/auth.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'signup', name: name, email: email, mobile: mobile, pwd: pwd, confirm: confirm })
+    fetch('http://suharshith.page.gd/auth.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+        action: 'signin', 
+        email: email, 
+        pwd: pwd 
     })
+})
     .then(r => r.json())
     .then(data => {
         btn.classList.remove('loading'); btn.disabled = false;
         if(data.success){
             showSuccess(`Access Granted`, `Authenticated as ${data.name}. Loading dashboard matrix…`);
+            window.location.href = "http://suharshith.page.gd/dashboard.php";
         } else {
             errEl.textContent = data.message;
         }
@@ -134,11 +139,18 @@ function doSignUp(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('https://suharshith.infinityfreeapp.com/auth.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'signup', name: name, email: email, mobile: mobile, pwd: pwd, confirm: confirm })
+    fetch('http://suharshith.page.gd/auth.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+        action: 'signup', 
+        name: name, 
+        email: email, 
+        mobile: mobile, 
+        pwd: pwd, 
+        confirm: confirm 
     })
+})
     .then(r => r.json())
     .then(data => {
         btn.classList.remove('loading'); btn.disabled = false;
@@ -163,10 +175,16 @@ function showSuccess(title, sub){
     document.getElementById('overlayTitle').textContent = title;
     document.getElementById('overlaySub').textContent = sub;
     document.getElementById('successOverlay').classList.add('show');
-    requestAnimationFrame(() => { requestAnimationFrame(() => { document.getElementById('redirectFill').style.width = '100%'; }); });
+    requestAnimationFrame(() => { 
+        requestAnimationFrame(() => { 
+            document.getElementById('redirectFill').style.width = '100%'; 
+        }); 
+    });
     
-    // Redirects directly to the new internal PHP dashboard
-    setTimeout(() => { window.location.href = 'dashboard.php'; }, 2500);
+    // Redirects directly to your live production domain on InfinityFree
+    setTimeout(() => { 
+        window.location.href = 'http://suharshith.page.gd/dashboard.php'; 
+    }, 2500);
 }
 
 document.addEventListener('input', e => { if(e.target.tagName === 'INPUT') e.target.classList.remove('error-state'); });
