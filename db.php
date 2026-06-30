@@ -2,7 +2,7 @@
 // db.php - Centralized Secure PDO Database Connector Module
 
 $host    = 'sql108.infinityfree.com';
-$db      = 'users_management_system';
+$db      = 'if0_42305032_users_management_system';
 $user    = 'if0_42305032'; 
 $pass    = 'Kamma2006'; // Leave blank for default local XAMPP setups
 $charset = 'utf8mb4';
