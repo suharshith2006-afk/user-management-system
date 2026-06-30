@@ -1,4 +1,14 @@
 <?php
+// Allow requests from your specific live Vercel frontend URL
+header("Access-Control-Allow-Origin: https://user-management-system-3110.vercel.app");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Credentials: true");
+
+// Handle preflight OPTIONS network requests gracefully
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit(0);
+}
 // auth.php - Server-Side Data Processor & Session Controller
 session_start();
 require_once 'db.php';

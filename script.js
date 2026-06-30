@@ -94,10 +94,10 @@ function doSignIn(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('auth.php', {
+    fetch('https://suharshith.infinityfreeapp.com/auth.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'signin', email: email, pwd: pwd })
+        body: JSON.stringify({ action: 'signup', name: name, email: email, mobile: mobile, pwd: pwd, confirm: confirm })
     })
     .then(r => r.json())
     .then(data => {
@@ -134,7 +134,7 @@ function doSignUp(){
 
     btn.classList.add('loading'); btn.disabled = true; errEl.textContent = '';
 
-    fetch('auth.php', {
+    fetch('https://suharshith.infinityfreeapp.com/auth.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'signup', name: name, email: email, mobile: mobile, pwd: pwd, confirm: confirm })
